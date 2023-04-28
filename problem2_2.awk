@@ -17,14 +17,14 @@ BEGIN {
         
     }
 
-    # Leer el archivo con funcion getline, recorre linea a linea
+    # Lee el archivo con funcion getline, recorre linea a linea
     while (getline < "sismos.csv") {
         # recorre la fecha
         split($2, fecha, "/") #columna meses
         mes = fecha[2];
         
 
-        # Incrementar contador de sismos y sumar valores por mes
+        # incrementa contador de sismos y sumar valores por mes
         for (i=1; i<=4; i++) {
             if (mes == meses[i]) {
                 total_sismos[i]++;
@@ -54,22 +54,19 @@ BEGIN {
     }
 
     # Cerrar el archivo
-    #close("sismos.csv")
+    close("sismos.csv")
 
-    # Calcular promedios y desviaciones estándar:
-    #wk: division by zero
-    #input record number 3182, file sismos.csv
-    #source line number 76
-    # desde aqui arroja ese error, al parecer el archivo presenta valores 0, en la 4 columna (hora 0); lo siguiente es para que excluya los 0 de los calculos
+    # calcula promedios y desviaciones estándar:
+    
     for (i=1; i<=4; i++) {
 
         if (count[i] != 0) { #verifica que existan sismos para que no haya division por cero 
             prom_magnitudes[i] = sum_magnitudes[i] / count[i];
-            prom_profundidades[i] = sum_profundidades[i] / count[i];#divide cada uno en la cantidad total de sismo de cada mes
+            prom_profundidades[i] = sum_profundidades[i] / count[i]; #divide cada uno en la cantidad total de sismo de cada mes
             prom_latitudes[i] = sum_latitudes[i] / count[i];
             prom_longitudes[i] = sum_longitudes[i] / count[i];
 
-            for (i=1; i<=count[i]; i++) { 
+            for (j=1; j<=count[i]; j++) { 
                 sum_var_magnitudes[i] += (prom_magnitudes[i] - $10) ** 2;#cuadrados de la suma de las diferencias entre cada valor
                 sum_var_profundidades[i] += (prom_profundidades[i] - $9) ** 2;
                 sum_var_latitudes[i] += (prom_latitudes[i] - $7) ** 2;
@@ -82,7 +79,7 @@ BEGIN {
         }    
     }
 
-    close("sismos.csv")
+    
 
 }           
         
