@@ -90,7 +90,7 @@ END {
         printf("Numero total de sismos: %d\n", total_sismos[i])
         printf("Promedio de magnitud: %.2f\n", prom_magnitudes[i])
         printf("Desviacion estandar de magnitud: %.2f\n", desv_magnitudes[i])
-        printf("Promedio de profundidad: %.2f\n", prom_profundidades)
+        printf("Promedio de profundidad: %.2f\n", prom_profundidades[i])
         printf("Desviacion estandar de profundidad: %.2f\n", desv_profundidades[i])
         printf("Promedio de latitud: %.2f\n", prom_latitudes[i])
         printf("Promedio de longitud: %.2f\n", prom_longitudes[i])
