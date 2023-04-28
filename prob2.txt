@@ -1,0 +1,32 @@
+Mes: ene
+total_sismos: 0
+sum_magnitudes: 0
+sum_profundidades: 0
+sum_latitudes: 0
+sum_longitudes: 0
+count: 0
+Mes: feb
+total_sismos: 0
+sum_magnitudes: 0
+sum_profundidades: 0
+sum_latitudes: 0
+sum_longitudes: 0
+count: 0
+Mes: mar
+total_sismos: 0
+sum_magnitudes: 0
+sum_profundidades: 0
+sum_latitudes: 0
+sum_longitudes: 0
+count: 0
+Mes: abr
+total_sismos: 0
+sum_magnitudes: 0
+sum_profundidades: 0
+sum_latitudes: 0
+sum_longitudes: 0
+count: 0
+Mes: ene
+Numero total de sismos: 0
+Promedio de magnitud: 0.00
+Desviacion estandar de magnitud: 0.00
